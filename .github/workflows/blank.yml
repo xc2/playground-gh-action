@@ -27,7 +27,9 @@ jobs:
 
       - name: background test
         run: |
-          { echo 'start' ; sleep 10s; echo 'end' } &
+          echo -e '#!/bin/bash\necho start\nsleep 10s\necho end\n' > run.sh
+          bash run.sh &
+          
       - name: command test
         run: |
           echo '::echo::on'
