@@ -43,4 +43,5 @@ jobs:
           echo '::warning group=foo::warning1'
           echo '::warning group=bar::warning2'
           echo '::endgroup::bar'
+          sleep 10s
           
